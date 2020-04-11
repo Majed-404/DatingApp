@@ -32,7 +32,7 @@ namespace DatingApp.API.Core.Repository
 
         private bool VerifyPasswordHash(string _password, byte[] _passwordHash, byte[] _passwordSalt)
         {
-            using(var _hmac = new System.Security.Cryptography.HMACSHA512())
+            using(var _hmac = new System.Security.Cryptography.HMACSHA512(_passwordSalt))
             {
                 var _computedHash = _hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(_password));
                 for (int i = 0; i < _computedHash.Length; i++)
