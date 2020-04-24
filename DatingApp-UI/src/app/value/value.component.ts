@@ -22,7 +22,7 @@ export class ValueComponent implements OnInit {
       .subscribe(response => {
         this.valuesList = response;
       }, error => {
-        alert("some thing bad is happen");
+       // alert("some thing bad is happen");
       });
   }
 }
