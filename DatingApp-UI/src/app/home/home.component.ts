@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   }
 
   CancelRegisterMode(registerMode: boolean) {
-    this.registerMode = registerMode;
+    this.registerMode = !this.registerMode;
   }
 
 }
